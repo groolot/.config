@@ -1,0 +1,6 @@
+[submodule "i3"]
+	path = i3
+	url = git@framagit.org:groolot/i3wm-config.git
+[submodule "i3blocks"]
+	path = i3blocks
+	url = git@framagit.org:groolot/i3blocks.git
