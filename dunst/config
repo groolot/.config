@@ -199,17 +199,54 @@
 #    urgency = normal
 #
 
-[slack_highlight]
+[flameshot]
 # matching
-  appname = "(Firefox|Slack)"
-  summary = ".*ptm-team-sync.*"
+  appname = "flameshot"
 # doing
-  timeout = 30
+  urgency = low
+  timeout = 15
 
 [slack_stick]
 # matching
-  appname = "(Firefox|Slack)"
-  body = ".*@p1-gdd.*"
+  appname = "Slack"
+  body = "(gdd|GDD)"
 # doing
   urgency = critical
+
+[slack_highlight]
+# matching
+  appname = "Slack"
+  summary = "ptm-team-sync"
+# doing
+  timeout = 30
+
+[slack_customers]
+# matching
+  appname = "Slack"
+  summary = "customer.+"
+# doing
+  urgency = high
+  timeout = 0
+
+# Re-apply urgency formatting if messages have been transformed
+[my_urgency_low]
+# matching
+  msg_urgency = low
+# doing
+  background = "#333333"
+  foreground = "#ffffff"
+
+[my_urgency_normal]
+# matching
+  msg_urgency = normal
+# doing
+  background = "#AFD700"
+  foreground = "#000000"
+
+[my_urgency_critical]
+# matching
+  msg_urgency = critical
+# doing
+  background = "#800000"
+  foreground = "#ffffff"
   timeout = 0
