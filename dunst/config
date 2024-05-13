@@ -199,13 +199,6 @@
 #    urgency = normal
 #
 
-[flameshot]
-# matching
-  appname = "flameshot"
-# doing
-  urgency = low
-  timeout = 15
-
 [slack_stick]
 # matching
   appname = "Slack"
@@ -218,15 +211,14 @@
   appname = "Slack"
   summary = "ptm-team-sync"
 # doing
-  timeout = 30
+  timeout = 60
 
 [slack_customers]
 # matching
   appname = "Slack"
   summary = "customer.+"
 # doing
-  urgency = high
-  timeout = 0
+  urgency = critical
 
 # Re-apply urgency formatting if messages have been transformed
 [my_urgency_low]
@@ -249,4 +241,14 @@
 # doing
   background = "#800000"
   foreground = "#ffffff"
+  timeout = 0
+
+# Bypassing urgencies
+[slack_GitHub]
+# matching
+  appname = "Slack"
+  body = "^GitHub"
+# doing
+  background = "#e7c5ff"
+  foreground = "#000000"
   timeout = 0
